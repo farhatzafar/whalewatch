@@ -24,7 +24,12 @@ export default function ResponsiveDatePickers() {
           <Grid item xs={12} sm={6} md={4}>
             {/* Title and Table container */}
             <Box sx={{ textAlign: 'center', marginBottom: 2 }}>
-              <Typography variant="h6" sx={{ marginBottom: 1, fontWeight: 'bold'}}>
+              <Typography variant="h6" 
+              sx={{
+                 marginBottom: 1,
+                fontWeight: 'bold',
+                marginTop: '20px'
+                 }}>
                 Ticket Prices
               </Typography>
               <TableContainer
