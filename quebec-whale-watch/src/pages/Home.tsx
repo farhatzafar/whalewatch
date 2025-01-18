@@ -58,7 +58,7 @@ const Home: React.FC = () => {
           position: 'relative',
           width: '100vw',
           height: { xs: '250px', sm: '350px' }, // Slightly larger height for more impact
-          marginTop: '64px', // Adjusted to compensate for AppBar height
+          marginTop: '55px', // Adjusted to compensate for AppBar height
           overflow: 'hidden', // Ensures image stays within container
         }}
       >
@@ -119,8 +119,9 @@ const Home: React.FC = () => {
             variant="body1"
             sx={{
               fontSize: { xs: 'body2', sm: 'body1' },
-              fontStyle: 'italic',
-              color: '#333',
+              fontFamily: 'Lato, sans-serif',
+        color: '#00557f',
+        fontStyle: 'italic',
               lineHeight: 1.7,
             }}
           >
@@ -173,6 +174,7 @@ const Home: React.FC = () => {
               '&:hover': {
                 backgroundColor: '#f50057', // Vibrant hover effect
                 transform: 'scale(1.05)', // Slight scaling effect on hover
+                color: '#e1f4f9'
               },
               transition: 'transform 0.2s ease-in-out', // Smooth scaling transition
             }}

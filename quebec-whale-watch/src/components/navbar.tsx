@@ -7,7 +7,12 @@ const Navbar: React.FC = () => {
   return (
     <AppBar position="fixed" sx={{ width: '100%' }}>
       <Toolbar>
-        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+        <Typography variant="h6" 
+        sx={{ 
+          flexGrow: 1,
+          fontFamily: 'Montserrat',
+          fontSize: '1rem'
+           }}>
           Quebec Whale Watch
         </Typography>
         {/* Wrap each Button with Link for routing */}
