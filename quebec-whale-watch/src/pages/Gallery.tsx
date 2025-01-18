@@ -25,6 +25,14 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
 
 export default function QuiltedImageList() {
   return (
+    <div
+    style={{
+        position: 'absolute', 
+        left: '50%', 
+        top: '50%',
+        transform: 'translate(-50%, -50%)'
+    }}
+>
     <Box
       sx={{
         display: 'flex',
@@ -71,6 +79,7 @@ export default function QuiltedImageList() {
         ))}
       </ImageList>
     </Box>
+    </div>
   );
 }
 const itemData = [
