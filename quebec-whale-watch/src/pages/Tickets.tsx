@@ -22,27 +22,38 @@ export default function ResponsiveDatePickers() {
         <Grid container spacing={4} justifyContent="center">
           {/* Left Column: Ticket Price Table */}
           <Grid item xs={12} sm={6} md={4}>
-            <Typography variant="h6" sx={{ marginBottom: 2 }}>
-              Ticket Prices
-            </Typography>
-            <TableContainer component={Paper} sx={{ maxWidth: 400 }}>
-              <Table>
-                <TableHead>
-                  <TableRow>
-                    <TableCell><strong>Category</strong></TableCell>
-                    <TableCell><strong>Price</strong></TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {ticketPrices.map((ticket) => (
-                    <TableRow key={ticket.category}>
-                      <TableCell>{ticket.category}</TableCell>
-                      <TableCell>{ticket.price}</TableCell>
+            {/* Title and Table container */}
+            <Box sx={{ textAlign: 'center', marginBottom: 2 }}>
+              <Typography variant="h6" sx={{ marginBottom: 1, fontWeight: 'bold'}}>
+                Ticket Prices
+              </Typography>
+              <TableContainer
+                component={Paper}
+                sx={{
+                  maxWidth: 400,
+                  margin: '0 auto',
+                  border: '2px solid #1976d2', // Blue border for the table
+                  borderRadius: '8px', // Rounded corners
+                }}
+              >
+                <Table>
+                  <TableHead>
+                    <TableRow>
+                      <TableCell><strong>Category</strong></TableCell>
+                      <TableCell><strong>Price</strong></TableCell>
                     </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
+                  </TableHead>
+                  <TableBody>
+                    {ticketPrices.map((ticket) => (
+                      <TableRow key={ticket.category}>
+                        <TableCell>{ticket.category}</TableCell>
+                        <TableCell>{ticket.price}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </Box>
           </Grid>
 
           {/* Right Column: Text and DatePicker */}

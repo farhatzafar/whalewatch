@@ -47,16 +47,9 @@ export default function QuiltedImageList() {
       }}
     >
       {/* Title */}
-      <Typography
-        variant="h3"               // Use a large heading
-        sx={{
-          marginBottom: 3,         // Space between title and gallery
-          fontWeight: 'bold',      // Bold text for emphasis
-          letterSpacing: 1,        // Space out letters for style
-        }}
-      >
-        Gallery
-      </Typography>
+      <Typography variant="h4" gutterBottom>
+          Gallery
+        </Typography>
 
       {/* ImageList */}
       <ImageList

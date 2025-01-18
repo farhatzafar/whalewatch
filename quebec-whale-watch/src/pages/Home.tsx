@@ -110,7 +110,7 @@ const Home: React.FC = () => {
               marginBottom: 2,
               fontFamily: 'cursive, sans-serif',
               letterSpacing: '1px',
-              color: '#1976d2',
+              color: '#0034ca',
             }}
           >
             Discover the Magic of Whale Watching in Tadoussac, Quebec!
@@ -146,7 +146,7 @@ const Home: React.FC = () => {
                     }}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#1976d2' }}>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#0034ca' }}>
                       {whale.name}
                     </Typography>
                     <Typography variant="body2" sx={{ color: '#333' }}>
