@@ -27,13 +27,13 @@ export default function QuiltedImageList() {
   return (
     <div
     style={{
-        position: 'absolute', 
-        left: '50%', 
-        top: '50%',
-        transform: 'translate(-50%, -50%)'
+    //     position: 'absolute', 
+    //     left: '50%', 
+    //     top: '50%',
+    //     transform: 'translate(-50%, -50%)'
     }}
 >
-    <Box
+<Box
       sx={{
         display: 'flex',
         flexDirection: 'column',    // Stack items vertically
@@ -46,9 +46,18 @@ export default function QuiltedImageList() {
         
       }}
     >
+
       {/* Title */}
-      <Typography variant="h4" gutterBottom>
-          Gallery
+      <Typography variant="h6" gutterBottom
+      sx={{
+        paddingLeft: '10%',
+        paddingRight: '10%',
+        paddingTop: '3%',
+        fontFamily: 'Lato, sans-serif',
+        color: '#00557f',
+        fontStyle: 'italic'
+      }}>
+      Get ready to snap breathtaking shots as you set sail on a whale watching adventure like no other! Imagine the thrill of capturing these magnificent creatures in their natural habitat — from powerful breaches to graceful tail slaps.
         </Typography>
 
       {/* ImageList */}
