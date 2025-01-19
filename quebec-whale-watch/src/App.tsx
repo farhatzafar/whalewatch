@@ -34,6 +34,7 @@ const App: React.FC = () => {
           <Route path="/tickets" element={<Tickets />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Home />} />  {/* Redirect any unmatched route to Home */}
         </Routes>
       </div>
       </ThemeProvider>
