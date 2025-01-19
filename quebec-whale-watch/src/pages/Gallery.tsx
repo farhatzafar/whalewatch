@@ -51,7 +51,7 @@ export default function QuiltedImageList() {
       sx={{
         paddingLeft: '10%',
         paddingRight: '10%',
-        paddingTop: '3%',
+        paddingTop: '4%',
         fontFamily: 'Lato, sans-serif',
         color: '#00557f',
         fontStyle: 'italic'
