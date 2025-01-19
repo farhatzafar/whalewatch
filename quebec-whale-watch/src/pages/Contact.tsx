@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Button, Typography, Box, Container, Grid } from '@mui/material';
+import { TextField, Button, Typography, Container, Grid } from '@mui/material';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
       <Grid container spacing={4}>
         {/* Left Section: Contact Form */}
         <Grid item xs={12} md={6}>
-          <Typography variant="h5" gutterBottom sx={{ marginTop: '20%', color: '#00557f'}}>
+          <Typography variant="h5" gutterBottom sx={{ marginTop: '20%'}}>
             Contact Us
           </Typography>
 
