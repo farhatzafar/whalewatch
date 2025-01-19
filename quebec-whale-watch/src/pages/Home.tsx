@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography, Button, Container, Card, CardContent, Grid, CardMedia, Paper } from '@mui/material';
+import { Link } from 'react-router-dom';  // Import Link for client-side routing
 import whaleWatchImage from '../assets/coverimage.jpg'; // Import your image
 
 // Images for each whale
@@ -120,8 +121,8 @@ const Home: React.FC = () => {
             sx={{
               fontSize: { xs: 'body2', sm: 'body1' },
               fontFamily: 'Lato, sans-serif',
-        color: '#00557f',
-        fontStyle: 'italic',
+              color: '#00557f',
+              fontStyle: 'italic',
               lineHeight: 1.7,
             }}
           >
@@ -166,7 +167,8 @@ const Home: React.FC = () => {
             variant="contained"
             color="primary"
             size="large"
-            href="/tickets"
+            component={Link}  // Use Link here for client-side routing
+            to="/tickets"  // Use the 'to' prop instead of 'href'
             sx={{
               padding: '12px 24px',
               fontSize: '1.2rem',
