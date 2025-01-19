@@ -27,7 +27,7 @@ export default function ResponsiveDatePickers() {
               sx={{
                  marginBottom: 1,
                 fontWeight: 'bold',
-                marginTop: '20px'
+                marginTop: '60px'
                  }}>
                 Ticket Prices
               </Typography>
@@ -62,7 +62,7 @@ export default function ResponsiveDatePickers() {
 
           {/* Right Column: Text and DatePicker */}
           <Grid item xs={12} sm={6} md={6}>
-            <Typography variant="h5" sx={{ marginBottom: 2 }}>
+            <Typography variant="h5" sx={{ marginBottom: 2, padding: '20px' }}>
               All whale watching cruises leave at 10AM daily. Please select the date for which you would like to purchase tickets.
             </Typography>
 
@@ -75,7 +75,7 @@ export default function ResponsiveDatePickers() {
               ]}
             >
               <DemoItem label="Select a date">
-                <DatePicker defaultValue={dayjs('2022-04-17')} />
+                <DatePicker defaultValue={dayjs('2025-06-17')} />
               </DemoItem>
             </DemoContainer>
           </Grid>
