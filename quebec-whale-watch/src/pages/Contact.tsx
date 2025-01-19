@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Button, Typography, Box, Container } from '@mui/material';
+import { TextField, Button, Typography, Box, Container, Grid } from '@mui/material';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -43,81 +43,84 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div
-    style={{
-        position: 'absolute', 
-        left: '50%', 
-        top: '50%',
-        transform: 'translate(-50%, -50%)'
-    }}
->
-    <Container maxWidth="sm">
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          marginTop: 4,
-        }}
-      >
-        <Typography variant="h4" gutterBottom>
-          Contact Us
-        </Typography>
+    <Container maxWidth="lg" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
+      <Grid container spacing={4}>
+        {/* Left Section: Contact Form */}
+        <Grid item xs={12} md={6}>
+          <Typography variant="h5" gutterBottom sx={{ marginTop: '20%', color: '#00557f'}}>
+            Contact Us
+          </Typography>
 
-        <form onSubmit={handleSubmit} style={{ width: '100%' }}>
-          {/* Name */}
-          <TextField
-            label="Name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            fullWidth
-            margin="normal"
-            error={!!formErrors.name}
-            helperText={formErrors.name}
-          />
+          <form onSubmit={handleSubmit} style={{ width: '100%' }}>
+            {/* Name */}
+            <TextField
+              label="Name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              fullWidth
+              margin="normal"
+              error={!!formErrors.name}
+              helperText={formErrors.name}
+            />
 
-          {/* Email */}
-          <TextField
-            label="Email"
-            name="email"
-            type="email"
-            value={formData.email}
-            onChange={handleChange}
-            fullWidth
-            margin="normal"
-            error={!!formErrors.email}
-            helperText={formErrors.email}
-          />
+            {/* Email */}
+            <TextField
+              label="Email"
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+              fullWidth
+              margin="normal"
+              error={!!formErrors.email}
+              helperText={formErrors.email}
+            />
 
-          {/* Message */}
-          <TextField
-            label="Message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            fullWidth
-            multiline
-            rows={4}
-            margin="normal"
-            error={!!formErrors.message}
-            helperText={formErrors.message}
-          />
+            {/* Message */}
+            <TextField
+              label="Message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              fullWidth
+              multiline
+              rows={4}
+              margin="normal"
+              error={!!formErrors.message}
+              helperText={formErrors.message}
+            />
 
-          {/* Submit Button */}
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            fullWidth
-            sx={{ marginTop: 2 }}
-          >
-            Send Message
-          </Button>
-        </form>
-      </Box>
+            {/* Submit Button */}
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              fullWidth
+              sx={{ marginTop: 2 }}
+            >
+              Send Message
+            </Button>
+          </form>
+        </Grid>
+
+        {/* Right Section: Contact Info */}
+        <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', }}>
+          <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>
+            Contact Information
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            <strong>Address:</strong> 163 Rue Bellevue, Tadoussac, QC G0T 3B8
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            <strong>Phone:</strong> (418) 284-2319
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            <strong>Email:</strong> quebecwhalewatch@gmail.com
+          </Typography>
+        </Grid>
+      </Grid>
     </Container>
-    </div>
   );
 };
 
